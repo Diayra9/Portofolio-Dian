@@ -4,6 +4,7 @@
     --text-color: #4f3466;
     --text-color2: #d2c9d4;
     --accent-color: #220a27;
+    --card-color: #d2c9d4;
 }
 
 [data-theme="dark"] {
@@ -11,6 +12,7 @@
     --bg-color2: #75618a;
     --text-color: #d2c9d4;
     --accent-color: #b780b9;
+    --card-color: #75618a;
 }
 
 body {
@@ -359,6 +361,88 @@ header {
     line-height: 1.8;
     margin-bottom: 1.5rem;
     font-size: clamp(0.8rem, 1.3vw, 1rem);
+}
+
+/***** PROJECTS *****/
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.project-card {
+    width: 320px;
+    height: 360px;
+    background: var(--card-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.project-card:hover .project-image {
+    filter: brightness(1);
+}
+
+.project-content {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.project-content h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+.project-content p {
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.button-group a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    background-color: var(--accent-color);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-group a:hover {
+    background-color: var(--text-color);
+    transform: scale(1.1);
 }
 
 /***** RESPONSIVE *****/
