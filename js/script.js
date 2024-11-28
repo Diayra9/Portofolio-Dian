@@ -56,12 +56,16 @@ document.addEventListener("visibilitychange", () => {
 
 // Color Font Text
 const textElement = document.querySelector(".intro h1 span");
-const colors = ["#a580ca", "#4a1985", "#260656", "#120239"];
+if (textElement) { // Pastikan elemen ada
+    const colors = ["#a580ca", "#4a1985", "#260656", "#120239"];
+    let colorIndex = 0;
 
-let colorIndex = 0;
-function changeTextColor() {
-  colorIndex = (colorIndex + 1) % colors.length;
-  textElement.style.color = colors[colorIndex];
+    function changeTextColor() {
+        colorIndex = (colorIndex + 1) % colors.length;
+        textElement.style.color = colors[colorIndex];
+    }
+
+    setInterval(changeTextColor, 2000);
+} else {
+    console.error("Element not found!");
 }
-
-setInterval(changeTextColor, 2000);

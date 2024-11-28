@@ -231,6 +231,115 @@ header {
     margin-bottom: 0px;
 }
 
+/***** CONTACT *****/
+.contact-info {
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    text-align: left;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+.contact-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: var(--text-color);
+    flex: 1 1 calc(33.33% - 15px);
+    max-width: calc(33.33% - 15px);
+    justify-content: center;
+}
+
+.contact-list li i {
+    margin-right: 8px;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.contact-list a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    margin: 0 0 30px 0;
+}
+
+.submit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-color-dark);
+}
+
+.contact-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: var(--text-color);
+    flex: 1 1 calc(33.33% - 15px);
+    max-width: calc(33.33% - 15px);
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-list li i {
+    margin-right: 8px;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.contact-list a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+.sosmed {
+    display: none;
+}
+
 /***** TIMELINE *****/
 .timeline {
     position: relative;
@@ -315,7 +424,7 @@ header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 60px;
+    padding: 60px 60px 0 60px;
     margin: 0;
 }
 
@@ -445,6 +554,49 @@ header {
     transform: scale(1.1);
 }
 
+/***** WARNING POP UP *****/
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    background-color: var(--bg-color2);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+
+.popup-content p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.close-btn {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
 /***** RESPONSIVE *****/
 @media (max-width: 1030px) {
     .timeline-item .timeline-content {
@@ -548,11 +700,25 @@ header {
         margin-bottom: 1.5rem;
         font-size: 0.9rem;
     }   
+
+    .contact-info {
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 800px) {
     .timeline-item .timeline-content {
         padding: 12px;
+    }
+
+    .contact-info {
+        margin-top: 0;
+    }
+
+    .contact-list li {
+        flex: 1 1 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+        gap: 20px;
     }
 }
 
@@ -629,7 +795,7 @@ header {
 
     .intro p {
         font-size: clamp(1.2rem, 4vw, 1.2rem);
-        padding: 1rem 0;
+        padding: 1rem 1rem;
     }
                 
     .wave-container {
@@ -668,6 +834,17 @@ header {
     .timeline-item .timeline-content p {
         font-size: 8px;
         padding: 5px;
+    }
+
+    .contact-list li {
+        flex: 1 1 100%;
+        max-width: 100%;
+        justify-content: flex-start;
+    }
+
+    .sosmed {
+        display: flex;
+        flex: 1 1 100%;
     }
 }
 
