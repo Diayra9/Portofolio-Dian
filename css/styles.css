@@ -500,7 +500,6 @@ header {
     font-size: clamp(0.8rem, 1.3vw, 1rem);
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -513,64 +512,21 @@ header {
     }
 }
 
-/* Initial state for animation */
 .about-left,
 .about-right {
     opacity: 0;
     transform: translateY(20px);
 }
 
-/* Animation applied when visible */
 .about-left.visible,
 .about-right.visible {
     animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* Profile image hover effect */
 .profile-image:hover {
     transform: scale(1.1);
     filter: brightness(1.2);
 }
-
-.modal-overlay {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-}
-
-.modal-content {
-    position: relative;
-    width: 80%;
-    height: 80%;
-    margin: 5% auto;
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.file-viewer {
-    width: 100%;
-    height: 100%;
-}
-
-.close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5rem;
-    color: #333;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0;
-}
-
 
 /***** PROJECTS *****/
 .project-container {
