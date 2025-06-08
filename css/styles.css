@@ -672,13 +672,41 @@ header {
     color: var(--text-color);
 }
 
-.close-btn {
+.close-btn,
+.close-desktop-btn {
     position: absolute;
     top: 3px;
     right: 10px;
     font-size: 30px;
     cursor: pointer;
     color: var(--text-color);
+}
+
+.viewing-btn {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+.viewing-btn button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.80rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.viewing-btn button:hover {
+    background-color: var(--text-color);
+    transform: translateY(-2px);
+}
+
+.viewing-btn button:active {
+    transform: translateY(0);
 }
 
 /***** RESPONSIVE *****/
